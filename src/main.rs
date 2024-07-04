@@ -141,10 +141,11 @@ async fn async_main() -> Result<()> {
         });
     }
 
-    if sign_out {
-        // TODO revisit examples and get rid of "handle references" (also, this panics)
-        drop(client.sign_out_disconnect().await);
-    }
+    println!("sign out state: {}", sign_out);
+    // if sign_out {
+    //     // TODO revisit examples and get rid of "handle references" (also, this panics)
+    //     drop(client.sign_out_disconnect().await);
+    // }
 
     Ok(())
 }
